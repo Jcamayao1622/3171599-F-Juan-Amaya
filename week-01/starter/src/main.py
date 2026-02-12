@@ -20,7 +20,7 @@ from fastapi import FastAPI
 
 # Diccionario de saludos por idioma
 GREETINGS: dict[str, str] = {
-    "es": "¡Hola, {name}! Bienvenido a Agrotech 🚜",
+    "es": "¡Hola, {name}! Bienvenido a Agrotech🚜",
     "en": "Hello, {name}! Welcome to Agrotech 🚜",
     "fr": "Bonjour, {name}! Bienvenue à Agrotech 🚜",
     "de": "Hallo, {name}! Willkommen bei Agrotech 🚜",
