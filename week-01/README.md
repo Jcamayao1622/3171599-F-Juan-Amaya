@@ -4,17 +4,19 @@
 
 **Dominio:** `84 | Plataforma de maquinaria agrícola | Agrotech`
 
-> ⚠️ **IMPORTANTE:** Cada aprendiz trabaja sobre un dominio diferente.
+> ⚠️ **IMPORTANTE:** Cada aprendiz trabaja sobre un dominio diferente.  
 > Este proyecto fue adaptado completamente al dominio asignado: **Agrotech**.
 
 ### 💡 Adaptación del Dominio
 
-| Concepto | Adaptación Agrotech |
-|----------|----------------------|
-| Main Entity | `Machine` (Maquinaria agrícola) |
-| Welcome Endpoint | `GET /farmer/{name}` |
-| Info Endpoint | `GET /machine/{identifier}/info` |
-| Service Endpoint | `GET /service/schedule` |
+| Concepto | Ejemplo Genérico | Adaptación Agrotech |
+|----------|------------------|---------------------|
+| Main Entity | `Item` | `Machine` (Maquinaria agrícola) |
+| Welcome Endpoint | `GET /visitor/{name}` | `GET /agrotech/bienvenida/{name}` |
+| Formal Welcome Endpoint | (No aplica) | `GET /agrotech/clientes/{name}/formal` |
+| Info Endpoint | `GET /item/{code}/info` | `GET /agrotech/maquinaria/{machine_id}` |
+| Service Endpoint | `GET /service/schedule` | `GET /agrotech/servicio/horario` |
+| Health Check | `GET /health` | `GET /health` |
 
 ---
 
@@ -28,6 +30,7 @@ Se aplican los conceptos aprendidos en la semana:
 - Type hints en Python
 - Programación asíncrona
 - Endpoints FastAPI con parámetros
+- Documentación automática (Swagger)
 
 ---
 
@@ -39,23 +42,21 @@ Al completar este proyecto, se demuestra la capacidad de:
 - ✅ Usar type hints correctamente
 - ✅ Crear endpoints con path y query parameters
 - ✅ Adaptar conceptos genéricos a un dominio real
-- ✅ Documentar la API con Swagger
+- ✅ Documentar la API
 
 ---
 
-## 📦 Requisitos Funcionales
+## 📦 Requisitos Funcionales (Adaptado a Agrotech)
 
 ---
 
 ### RF-01: API Information Endpoint
 
 - **Ruta:** `GET /`
-- **Descripción:** Retorna información general de la API adaptada al dominio
-- **Respuesta esperada:**
+- **Descripción:** Retorna información general de la API adaptada al dominio Agrotech.
+- **Respuesta:**
 
-```json
-{
-  "name": "Agrotech Machinery API",
-  "version": "1.0.0",
-  "domain": "agrotech"
-}
+📌 Ejemplo:
+
+```bash
+curl http://localhost:8000/
