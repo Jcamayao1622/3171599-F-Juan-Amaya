@@ -1,73 +1,88 @@
-# React + TypeScript + Vite
+# 🚜 Week 4 - Plataforma de Maquinaria Agrícola (Agrotech)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📌 Descripción del Proyecto
 
-Currently, two official plugins are available:
+Este proyecto corresponde a la Semana 4 y consiste en el desarrollo de un catálogo interactivo utilizando React y TypeScript.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+El dominio asignado es una **Plataforma de Maquinaria Agrícola (Agrotech)**, donde se visualiza un listado de maquinaria disponible con funcionalidades de búsqueda, filtrado y ordenamiento.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🏗️ Entidad Principal
 
-## Expanding the ESLint configuration
+**Maquinaria**
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Propiedades utilizadas:
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- id
+- nombre
+- categoria
+- precio
+- disponible
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## ✅ Funcionalidades Implementadas
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- Renderizado de lista utilizando `.map()` con keys únicas
+- Renderizado condicional de disponibilidad (Disponible / No disponible)
+- Búsqueda en tiempo real (case insensitive)
+- Filtro por categoría
+- Ordenamiento por precio (ascendente y descendente)
+- Contador de resultados
+- Estado vacío cuando no hay coincidencias
+- Tipado completo con TypeScript (sin uso de `any`)
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 🛠️ Tecnologías Utilizadas
+
+- React
+- TypeScript
+- Vite
+
+---
+
+## 🚀 Instrucciones de Ejecución
+
+1. Clonar el repositorio
+2. Ingresar a la carpeta:
+
+   cd week-04
+
+3. Instalar dependencias:
+
+   npm install
+
+4. Ejecutar el proyecto:
+
+   npm run dev
+
+5. Abrir el navegador en:
+
+   http://localhost:5173
+
+---
+
+## 📂 Estructura del Proyecto
+
+week-04/
+│── public/
+│── src/
+│── package.json
+│── vite.config.ts
+│── tsconfig.json
+│── README.md
+
+---
+
+## 🎯 Objetivo Académico
+
+Aplicar conceptos de:
+
+- Renderizado condicional
+- Manejo de estados
+- Listas con keys
+- Filtrado y ordenamiento
+- Búsqueda dinámica
+- Tipado con TypeScript
